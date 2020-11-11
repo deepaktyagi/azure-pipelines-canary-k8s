@@ -9,7 +9,7 @@ variables:
   dockerRegistryServiceConnection: 'ACR-POC-CONN'
   imageRepository: 'azure-pipelines-canary-k8s'
   containerRegistry: itsiaaspocacr.azurecr.io
-  tag: 'V1:$(Build.BuildId)'
+  tag: '$(Build.BuildId)'
 
 stages:
 - stage: Build
