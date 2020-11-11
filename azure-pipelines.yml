@@ -5,10 +5,10 @@ pool:
   vmImage: Ubuntu-16.04
 
 variables:
-  imageName: itsiaaspocacr.azurecr.io/azure-pipelines-canary-k8s
+  imageName: 'azure-pipelines-canary-k8s'
   dockerRegistryServiceConnection: 'ACR-POC-CONN'
   imageRepository: 'azure-pipelines-canary-k8s'
-  containerRegistry: itsiaaspocacr.azurecr.io
+  containerRegistry: 'itsiaaspocacr.azurecr.io'
   tag: '$(Build.BuildId)'
 
 stages:
