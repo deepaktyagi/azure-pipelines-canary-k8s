@@ -9,7 +9,7 @@ variables:
   dockerRegistryServiceConnection: 'ACR-POC-CONN'
   imageRepository: 'azure-pipelines-canary-k8s'
   containerRegistry: itsiaaspocacr.azurecr.io
-  tag: '$(Build.BuildId)'
+  tag: 'V1:$(Build.BuildId)'
 
 stages:
 - stage: Build
@@ -56,7 +56,7 @@ stages:
             inputs:
               action: createSecret
               secretName: azure-pipelines-canary-k8s
-              dockerRegistryEndpoint: itsiaaspocacr.azurecr.io/azure-pipelines-canary-k8s
+              dockerRegistryEndpoint: 'ACR-POC-CONN'
 
           - task: KubernetesManifest@0
             displayName: Deploy to Kubernetes cluster
