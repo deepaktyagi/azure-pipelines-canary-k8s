@@ -6,9 +6,9 @@ pool:
 
 variables:
   imageName: itsiaaspocacr.azurecr.io/azure-pipelines-canary-k8s
-  dockerRegistryServiceConnection: ACR-POC-CONN #replace with name of your Docker registry service connection
+  dockerRegistryServiceConnection: 'ACR-POC-CONN'
   imageRepository: 'azure-pipelines-canary-k8s'
-  containerRegistry: itsiaaspocacr.azurecr.io #replace with the name of your container registry, Should be in the format foobar.azurecr.io
+  containerRegistry: itsiaaspocacr.azurecr.io
   tag: '$(Build.BuildId)'
 
 stages:
